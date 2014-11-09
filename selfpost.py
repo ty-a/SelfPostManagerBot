@@ -30,7 +30,7 @@ ownersAccount="yourNameHere" #used to identify the bot owner in the useragent
 timeBetweenChecks = 60 * 60 # 60 seconds == 1 minute * 60 == 1 hour
 # END Configuration
 
-r = praw.Reddit(ownersAccount + 's bot for r/' + subreddit_name + ' that manages SelfPost only days. Source: https://github.com/ty-a/SelfPostManagerBot')
+r = praw.Reddit(ownersAccount + 's bot for r/' + subreddit_name + ' that manages SelfPost only days. Source: https://github.com/ty-a/SelfPostManagerBot', decode_html_entities = "yes" )
 r.login(username=username, password=password)
 sub = r.get_subreddit(subreddit_name)
 
